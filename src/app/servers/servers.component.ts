@@ -15,6 +15,20 @@ export class ServersComponent implements OnInit {
   permitirAdicaoServidor = false;
   statusAdicaoServidor = 'Nenhum servidor foi criado';
   serverName = 'Testserver';
+  serverCreated = false;
+  servers = ['SERVIDOR LETS CODE', 'SERVIDOR TURMA #810'];
+
+  servers2 = [{
+    name: 'Larissa',
+    idade: 23
+  }, 
+  {
+    name: 'Eduarda',
+    idade: 18
+  }]
+
+  // fazer um map em servers para exibir em letra minuscula
+  // serversCopy = ['servidor lets code', 'servidor turma #810']
 
   constructor() {
     setTimeout(() => {
@@ -26,6 +40,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.serverCreated = true;
     this.statusAdicaoServidor = 'Servidor criado! Nome do servidor é ' + this.serverName;
   }
 
@@ -33,5 +48,4 @@ export class ServersComponent implements OnInit {
     console.log(event);
     this.serverName = event.target.value;
   }
-
 }

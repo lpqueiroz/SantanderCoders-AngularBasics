@@ -3,5 +3,5 @@
 <!-- <div app-servers></div> -->
 <!-- <div class="app-servers"></div> -->
 
-<p>Server com id {{ serverId }} está {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server com id {{ serverId }} está {{ getServerStatus() }}</p>
 
